@@ -23,7 +23,7 @@ public class BasePage {
     @Before
     public void setupDriver() {
         try {
-            input = new FileInputStream("user.dir");
+            input = new FileInputStream("src/main/resources/config.properties");
         } catch (Exception e) {
             e.printStackTrace();
             System.out.println(e.getMessage());
@@ -65,7 +65,7 @@ public class BasePage {
     }
 
     @After
-    private void tearDow() {
+    public void tearDow() {
         driver.quit();
     }
 }
